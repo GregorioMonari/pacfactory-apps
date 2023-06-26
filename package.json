@@ -1,0 +1,38 @@
+{
+  "name": "pacfactory-apps",
+  "version": "1.0.0",
+  "description": "A collection of applications using the PacFactory client library",
+  "main": "build/pacfactory.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+
+    "test":"concurrently npm:test:*",
+    "test:build":"tsc -w",
+    "test:run":"nodemon build/pacfactory.js My2Sec/UsersConsumerTester -jsap ./resources/my2sec.jsap",
+
+    "start": "node build/pacfactory"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1"
+  },
+  "dependencies": {
+    "@arces-wot/sepa-js": "^0.13.2",
+    "greglogs": "^1.0.1",
+    "pacfactory": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregorioMonari/pacfactory-apps.git"
+  },
+  "keywords": [
+    "pac"
+  ],
+  "author": "Gregorio Monari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GregorioMonari/pacfactory-apps/issues"
+  },
+  "homepage": "https://github.com/GregorioMonari/pacfactory-apps#readme"
+}
